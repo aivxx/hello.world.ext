@@ -22,5 +22,7 @@ class MyExtension(omni.ext.IExt):
 
                 ui.Button("Click Me", clicked_fn=lambda: on_click())
 
+                ui.IntSlider(height=30).model.set_value(10)
+
     def on_shutdown(self):
         print("[omni.hello.world] MyExtension shutdown")
