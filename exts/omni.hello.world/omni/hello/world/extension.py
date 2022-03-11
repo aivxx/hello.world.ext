@@ -13,7 +13,9 @@ class MyExtension(omni.ext.IExt):
         self._window = ui.Window("My Window", width=300, height=300)
         with self._window.frame:
             with ui.VStack():
-                ui.Label("Some Label")
+                ui.Label("Hello World")
+                ui.Button("This is a button")
+
 
                 def on_click():
                     print("clicked!")
