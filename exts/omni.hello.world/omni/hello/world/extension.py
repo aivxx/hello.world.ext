@@ -10,7 +10,7 @@ class MyExtension(omni.ext.IExt):
     def on_startup(self, ext_id):
         print("[omni.hello.world] MyExtension startup")
 
-        self._window = ui.Window("My Window", width=300, height=300)
+        self._window = ui.Window("Hello World Ext", width=300, height=300)
         with self._window.frame:
             with ui.VStack():
 
