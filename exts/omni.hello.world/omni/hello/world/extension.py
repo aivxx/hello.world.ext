@@ -34,7 +34,7 @@ class MyExtension(omni.ext.IExt):
                 ui.Button("Click Me", clicked_fn=lambda: on_click())
 
                 ui.IntSlider(height=30).model.set_value(10)
-                ui.Spacer(height=10)
+             
         
       
                
