@@ -13,9 +13,20 @@ class MyExtension(omni.ext.IExt):
         self._window = ui.Window("My Window", width=300, height=300)
         with self._window.frame:
             with ui.VStack():
-                ui.Label("Hello World")
-                ui.Button("This is a button")
 
+                with ui.ZStack():
+                
+                 with ui.Placer(offset_x=1, offset_y=1):
+                    
+                  ui.Label("Hello World", height=50, style={"font_size":24})
+                ui.Button("This is a button", style= {"color":0xFF00AA00})
+
+                ui.Separator(height=5)
+                with ui.HStack(height=5):
+                    ui.Button("Another Button")
+                    ui.Button("A button here")
+                    ui.Button("One more")
+           
 
                 def on_click():
                     print("clicked!")
@@ -23,6 +34,11 @@ class MyExtension(omni.ext.IExt):
                 ui.Button("Click Me", clicked_fn=lambda: on_click())
 
                 ui.IntSlider(height=30).model.set_value(10)
+                ui.Spacer(height=10)
+        
+      
+               
+         
 
     def on_shutdown(self):
         print("[omni.hello.world] MyExtension shutdown")
